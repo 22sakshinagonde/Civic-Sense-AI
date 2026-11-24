@@ -1,0 +1,6 @@
+{
+  "name": "CivicSense AI",
+  "description": "AI-powered civic grievance redressal, real-time citizen complaint tracking, predictive municipal analytics, and command center for Bengaluru.",
+  "requestFramePermissions": ["geolocation", "camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

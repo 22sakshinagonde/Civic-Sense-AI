@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><title>CivicSense AI</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-fixed-variant": "#653e00", "surface-container-low": "#eff4ff", "on-primary-fixed-variant": "#264872", "on-primary-container": "#86a6d6", "surface-container-lowest": "#ffffff", "on-secondary-container": "#006f6b", "on-secondary-fixed": "#00201f", "surface-variant": "#d3e4fe", "outline": "#73777f", "on-secondary": "#ffffff", "tertiary-container": "#543300", "inverse-surface": "#213145", "on-tertiary-fixed": "#2a1700", "on-primary-fixed": "#001c3a", "secondary": "#006a66", "error": "#ba1a1a", "on-tertiary": "#ffffff", "on-error-container": "#93000a", "surface-container-highest": "#d3e4fe", "tertiary": "#372000", "surface-container-high": "#dce9ff", "secondary-fixed-dim": "#60d9d3", "secondary-container": "#7bf3ed", "on-tertiary-container": "#e49200", "on-surface": "#0b1c30", "on-primary": "#ffffff", "outline-variant": "#c3c6d0", "on-error": "#ffffff", "inverse-on-surface": "#eaf1ff", "tertiary-fixed": "#ffddb8", "surface": "#f8f9ff", "surface-tint": "#3f608c", "surface-bright": "#f8f9ff", "primary-container": "#173b65", "primary-fixed-dim": "#a8c8fa", "on-secondary-fixed-variant": "#00504d", "error-container": "#ffdad6", "secondary-fixed": "#7ef5ef", "on-background": "#0b1c30", "primary": "#00254a", "inverse-primary": "#a8c8fa", "surface-container": "#e5eeff", "background": "#f8f9ff", "tertiary-fixed-dim": "#ffb95f", "on-surface-variant": "#43474f", "primary-fixed": "#d4e3ff", "surface-dim": "#cbdbf5" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin": "2rem", "space-xl": "2.5rem", "space-md": "1rem", "space-sm": "0.5rem", "gutter": "1.5rem", "space-lg": "1.5rem", "margin-mobile": "1rem", "space-xs": "0.25rem", "gutter-mobile": "1rem" }, "fontFamily": { "label-sm": ["Inter"], "title-lg": ["Inter"], "headline-lg": ["Inter"], "body-md": ["Inter"], "display-mobile": ["Inter"], "headline-md": ["Inter"], "code-sm": ["Inter"], "headline-lg-mobile": ["Inter"], "display": ["Inter"], "body-sm": ["Inter"], "headline-sm": ["Inter"], "title-sm": ["Inter"], "title-md": ["Inter"], "label-md": ["Inter"], "body-lg": ["Inter"] }, "fontSize": { "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "600" }], "title-lg": ["18px", { "lineHeight": "26px", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "display-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "code-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "display": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "title-sm": ["14px", { "lineHeight": "20px", "fontWeight": "600" }], "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }] } } } }</script><style>@layer base { html, body { width: 100vw; margin: 0; padding: 0; min-height: 100%; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md antialiased flex flex-col min-h-screen selection:bg-secondary/20 selection:text-secondary"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="CivicSense AI Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/ALJJyrBoiWz9cVs0zZNXFe295g3tahnBVzX8HrlKZX2l_35olKtqagZf5_iAJ3TaW88AdbxsesaMD7bmP-7ASFgxZCBtD5lqp1q7kDtZT8y8Tgp4QOjNQltWJOVbnZ8cyb90m5c8Ags895fY7ZVVhyEH8QkyG8e-h4KMiZtLnc6rIm9i047jfhIY3V2DbpKu2kKuIABjKfQAUQeL-_HytHiarhhPVZmoRpxiHgA_yi32ncwb"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-title-sm text-title-sm text-primary tracking-tight truncate">CivicSense</span><span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed-variant leading-none font-semibold">AI</span></div><span class="font-label-sm text-label-sm text-on-surface-variant truncate">Home Overview</span></div></div><div class="flex items-center gap-space-xs flex-shrink-0"><a class="hidden sm:flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-primary font-label-sm text-label-sm hover:bg-surface-container-high transition-colors min-h-[44px]" href="tel:1533"><span class="material-symbols-outlined text-[16px] text-secondary">support_agent</span><span>1533 Sahaya</span></a><button aria-label="Notifications" class="relative w-11 h-11 flex items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></button><div class="w-11 h-11 flex items-center justify-center pl-1"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-secondary/30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTZHe1SnNA05IKOQTo3Ujd298FQ9IhpSklK7N9SGgMNUfew8_YIHlJqXUTe7IkiMJsX5E4XC_iBhzI7MoxzEJiqqXPOisLUeFwZSIhR8eSa494JJEgoHFdftqVwiN5wzaBdDXlO7nMtdJpiCSQ9nlD6gUR_ScZ6dgq4Lus5uRPjeqYo2rzQ-xnHESluKtvKeiJXkflnoH5BM6wom7lKgWbvj2gxPgatgS1Fo5kK9Q"/></div></div></div></header><main class="flex-1 w-full bg-surface pt-16 pb-24 relative flex flex-col"><div class="flex flex-col w-full pb-8">
+<!-- Hero Section -->
+<section class="px-gutter-mobile pt-space-md pb-space-lg flex flex-col gap-space-md">
+<!-- Partner Ward Pill -->
+<div class="inline-flex items-center gap-1.5 self-start px-3 py-1 rounded-full bg-surface-container text-on-surface-variant shadow-sm">
+<span class="material-symbols-outlined text-[15px] text-secondary">verified</span>
+<span class="font-label-sm text-label-sm tracking-normal">BBMP &amp; Smart Cities Mission • Bengaluru Ward 150</span>
+</div>
+<!-- Main Title & Value Proposition -->
+<div class="flex flex-col gap-2">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary font-bold tracking-tight">
+        Building Better Cities, <span class="text-secondary font-bold">Together.</span>
+</h1>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+        Report civic grievances in 10 seconds. AI automatically detects potholes, garbage piles, and non-functional streetlights, auto-routes to BBMP, BESCOM, or BWSSB, and tracks resolution with verifiable proof.
+      </p>
+</div>
+<!-- Primary Action CTAs -->
+<div class="flex flex-col sm:flex-row gap-space-sm pt-1">
+<a class="flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-primary text-on-primary font-title-sm text-title-sm shadow-md shadow-primary/20 active:scale-[0.98] transition-transform" data-path="report-issue" href="#">
+<span class="material-symbols-outlined text-[20px]">add_location_alt</span>
+<span>Report an Issue</span>
+</a>
+<a class="flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-secondary-container text-on-secondary-container font-title-sm text-title-sm shadow-sm active:scale-[0.98] transition-transform" data-path="citizen-tracker" href="#">
+<span class="material-symbols-outlined text-[20px]">search_check</span>
+<span>Track Complaint</span>
+</a>
+</div>
+<!-- Quick Ward Verification Snippet -->
+<div class="flex items-center gap-2.5 p-3 rounded-xl bg-surface-container-low">
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Detected Civic GPS</span>
+<span class="font-title-sm text-title-sm text-on-surface truncate">Bellandur Outer Ring Road, Ward 150 (Zone: Mahadevapura)</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary text-on-secondary flex-shrink-0">Live</span>
+</div>
+</section>
+<!-- Live Impact Metrics Counter -->
+<section class="px-gutter-mobile py-space-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<h2 class="font-title-sm text-title-sm text-on-surface uppercase tracking-wide">Live Municipal Impact</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Sync: 2m ago</span>
+</div>
+<div class="grid grid-cols-3 gap-2.5">
+<!-- Metric 1 -->
+<div class="p-3 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="w-7 h-7 rounded-lg bg-surface-container-low flex items-center justify-center text-primary mb-1">
+<span class="material-symbols-outlined text-[18px]">assignment_turned_in</span>
+</div>
+<div class="font-headline-sm text-headline-sm text-primary font-bold">18,429+</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant leading-tight mt-0.5">Issues Reported</div>
+</div>
+<!-- Metric 2 -->
+<div class="p-3 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="w-7 h-7 rounded-lg bg-secondary-container flex items-center justify-center text-on-secondary-container mb-1">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</div>
+<div class="font-headline-sm text-headline-sm text-secondary font-bold">94.2%</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant leading-tight mt-0.5">Resolved on SLA</div>
+</div>
+<!-- Metric 3 -->
+<div class="p-3 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="w-7 h-7 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container mb-1">
+<span class="material-symbols-outlined text-[18px]">domain</span>
+</div>
+<div class="font-headline-sm text-headline-sm text-primary font-bold">342</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant leading-tight mt-0.5">Active Wards</div>
+</div>
+</div>
+</section>
+<!-- Interactive AI Flow Visual Banner -->
+<section class="px-gutter-mobile py-space-md">
+<div class="p-4 rounded-xl bg-primary-container text-on-primary shadow-md flex flex-col gap-3 relative overflow-hidden">
+<!-- Ambient Glow Decorator -->
+<div class="absolute -right-10 -bottom-10 w-40 h-40 rounded-full bg-secondary/20 blur-2xl pointer-events-none"></div>
+<div class="flex items-center justify-between z-10">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-secondary flex items-center justify-center text-on-secondary">
+<span class="material-symbols-outlined text-[16px]">smart_toy</span>
+</div>
+<span class="font-title-sm text-title-sm text-on-primary">CivicSense AI Pipeline</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-on-primary/10 text-on-primary-container">YOLOv8 Civic Model</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-primary-container z-10 leading-snug">
+        Real-time multi-agent edge perception tags hazards, filters duplicate citizen reports, and assigns official SLA priority automatically.
+      </p>
+<!-- Pipeline Stepper Graphic -->
+<div class="grid grid-cols-4 gap-1 pt-2 z-10">
+<div class="flex flex-col items-center text-center gap-1">
+<div class="w-10 h-10 rounded-xl bg-surface-container-lowest/15 flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[20px]">photo_camera</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-primary-container">1. Snap</span>
+</div>
+<div class="flex flex-col items-center text-center gap-1">
+<div class="w-10 h-10 rounded-xl bg-secondary flex items-center justify-center text-on-secondary">
+<span class="material-symbols-outlined text-[20px]">psychology</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-primary">2. Edge Vision</span>
+</div>
+<div class="flex flex-col items-center text-center gap-1">
+<div class="w-10 h-10 rounded-xl bg-surface-container-lowest/15 flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[20px]">alt_route</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-primary-container">3. Auto Route</span>
+</div>
+<div class="flex flex-col items-center text-center gap-1">
+<div class="w-10 h-10 rounded-xl bg-surface-container-lowest/15 flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[20px]">task_alt</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-primary-container">4. Verified</span>
+</div>
+</div>
+<!-- Live Pipeline Telemetry Indicator -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-lowest/10 z-10 text-on-primary mt-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary-fixed">hub</span>
+<span class="font-label-sm text-label-sm">BBMP • BESCOM • BWSSB Shared Protocol</span>
+</div>
+<span class="font-code-sm text-code-sm text-secondary-fixed font-semibold">&lt; 0.4s triage</span>
+</div>
+</div>
+</section>
+<!-- How It Works Section -->
+<section class="px-gutter-mobile py-space-md flex flex-col gap-space-md">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">Effortless Civic Governance</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">How CivicSense Works</h2>
+</div>
+<!-- Step 1 -->
+<div class="p-4 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-surface-container text-primary font-bold">STEP 01</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">pin_drop</span>
+</div>
+<div class="flex gap-3">
+<div class="w-20 h-20 rounded-xl overflow-hidden flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A citizen holding a smartphone taking a geotagged photo of a damaged city street pothole in Bangalore during daytime with civic road background in realistic sharp detail." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCM4nxJoxpYSGXEZvvx8iwiJWsRmyHm0qH6E3hEnJKsjE6rxs7eGCtZh9DBslrVzF7tc_gAuhgMwMI1x_E9NXRsLSEfN1HsYiNUzGpdEVoRkVyiMdsS7nAYpcjlnOeRamzgpfwoNxsBt-HoOheMURhtjGZnpMoNPu-QT5ZQZcvAZ8CXkrA_9XlMwUtl_udUb0cvUB6lvx27h1a15-w_JzDxXS5bQ7H8V7z8FfGlvT0"/>
+</div>
+<div class="flex flex-col justify-center">
+<h3 class="font-title-sm text-title-sm text-on-surface">Snap &amp; Geotag in Seconds</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            Capture a photo. The app auto-attaches GPS lat-long, address reverse-lookup, and ward boundary boundaries instantly.
+          </p>
+</div>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="p-4 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-surface-container text-secondary font-bold">STEP 02</span>
+<div class="flex items-center gap-1 text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">model_training</span>
+<span>99.1% Confidence</span>
+</div>
+</div>
+<div class="flex gap-3">
+<div class="w-20 h-20 rounded-xl overflow-hidden flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="AI computer vision interface analyzing a municipal street issue showing bounding boxes around road cracks and debris with deep blue and teal high tech overlay graphics." src="https://lh3.googleusercontent.com/aida-public/AB6AXuASqrC6Gpq0AWvfeEqwnbaFygsKhTcm8tp3P0x7sFNaUtIeeHUrpivfUhlqq0-jweaHz5YZeuJNzedVcaLX54SW5avVALQCeTOfMGhksi_1OjynFFPJE02h1wdQ0FaYFCVOoSkF02yDM4wngH2Pz0w28EReMZDASDNjCt_9bDUKPLF14EeOIMbDXbU9rPAWgex2P0XPm4ScD03zzKlBizjkVipLOfl23e9ryi2horQ"/>
+</div>
+<div class="flex flex-col justify-center">
+<h3 class="font-title-sm text-title-sm text-on-surface">AI Detection &amp; Clustering</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            Our vision neural net classifies severity, flags safety hazards, and merges repeated resident complaints into single incident clusters.
+          </p>
+</div>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="p-4 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-surface-container text-primary font-bold">STEP 03</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">engineering</span>
+</div>
+<div class="flex gap-3">
+<div class="w-20 h-20 rounded-xl overflow-hidden flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A municipal road maintenance crew with safety vests and modern asphalt equipment repairing a civic road in urban India in broad daylight, professional and clean." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJxCt5C5p3xxtoy17DiRyRSHlOFqoDzoBENOtCCc9L7maJDgtuTaaw2MO8dqxjf39VbtNhg2O0UBZ7RIVuwQereKms46zp_CGT9s1li94SpuNYHz9tYcuA-CEBDZZBQ0-rwjfdSKICSo4ybk2pyXpiqlWf5QjCXT8IMHcZq5LQ4xe21VdfloTP-Y3263X5v1DU4BmJgV2_mpL_-IK8nFAS3pdEdP83paUmEtkwJAk"/>
+</div>
+<div class="flex flex-col justify-center">
+<h3 class="font-title-sm text-title-sm text-on-surface">Dispatched &amp; Resolved</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            Ward engineers receive automated work orders with countdown SLAs. Citizens receive before/after photographic verification.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Recent Resolved Spotlight in Bengaluru -->
+<section class="px-gutter-mobile py-space-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">Accountability In Action</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">Recent Resolved Spotlights</h2>
+</div>
+<a class="font-label-sm text-label-sm text-secondary hover:underline flex items-center gap-0.5" data-path="citizen-tracker" href="#">
+<span>View all</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+<!-- Spotlight Card 1 -->
+<div class="p-4 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">BBMP Road Infrastructure</span>
+</div>
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-semibold">Resolved in 18 hrs</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="font-title-sm text-title-sm text-on-surface">Pothole Repaired on 100 Feet Rd, Indiranagar</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Ward 112 • Incident ID #BLR-2024-8841</p>
+</div>
+<!-- Before and After Visual Comparer -->
+<div class="grid grid-cols-2 gap-2">
+<div class="relative rounded-lg overflow-hidden h-28 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Before photograph of a deep dangerous road pothole on a busy Bangalore street with visible warning stone markers and worn asphalt." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbiU2871w3tvz-MY9ZNmhgatMMqmKWbQxnuTFG3RkR625GWWMO73k6ZD-gFmsK6Wc52EPIDP9AZvyuH9pJxtNFYQrr4zadUUKV_gHk5c5DYU_jHbNHCnMsrV9Jv9U3hZzV_wSGJHDBqE8fltOEgtAtHZ9m1E-CBcBlHtYaNMfp9HC9SLGZMjLK7bhx0plN01C3Yx3JlArL30dTNr-5Ov4ZYmsdrH008ihgw85yjGw"/>
+<span class="absolute bottom-1.5 left-1.5 px-2 py-0.5 rounded bg-inverse-surface/80 text-inverse-on-surface font-label-sm text-label-sm">Before (Reported)</span>
+</div>
+<div class="relative rounded-lg overflow-hidden h-28 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="After photograph of the newly paved smooth bitumen asphalt patch on the urban road with clean finish and no hazards in bright daylight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeQm3-cI8AhUgvWAkeg0t57ByYOALJKngpbTi7o2P-SHZBNHeN-AUpkv8SZH-COPIjcBj9aj9Xl0rJyiRFG5mjPwTlShbAsx0jQmzpcnuhl292IrXPQvJHf2JW1LruugTDOzF6SpjdqShfBk3Iam8uJMpexChHua7pitG0dpL_zkZkp1Z_W94KuU-aeE3sGhKT6l8-YxSFcazYTCnNTBZxGX5uiRGMbMhq1vdJ5g4"/>
+<span class="absolute bottom-1.5 left-1.5 px-2 py-0.5 rounded bg-secondary text-on-secondary font-label-sm text-label-sm">After (Verified)</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">thumb_up</span>
+<span>48 verified residents approved</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Yesterday, 4:30 PM</span>
+</div>
+</div>
+<!-- Spotlight Card 2 -->
+<div class="p-4 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">BBMP Solid Waste Management</span>
+</div>
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-semibold">Resolved in 6 hrs</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="font-title-sm text-title-sm text-on-surface">Garbage Blackspot Cleared near HSR Sector 2 Park</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Ward 174 • Incident ID #BLR-2024-9102</p>
+</div>
+<!-- Before and After Visual Comparer -->
+<div class="grid grid-cols-2 gap-2">
+<div class="relative rounded-lg overflow-hidden h-28 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Before photo of an unauthorized garbage dumping spot with plastic waste bags on the sidewalk edge near a park fence in Bangalore." src="https://lh3.googleusercontent.com/aida-public/AB6AXuClM1gJFhOcLNelB_hnK-RcXV5I74Zv81dZSBpaTrv2F1PGlouJl9JELrH__8wU9TFMILsjXLsKMuUqNwB4fl5Q8Q-6By4sBD3L47xKzFEYOFUHt7dmw4hP33z7xOQl9fECRxBQG7fHGZaPFwrXbJzCt5pyTm4suGJUJgo_1Pxn1VwvodtKplKSuq5PlIY7wYg5u5ki7PEH7Pkwo7Zr3O-b2KAde2SytOdx2qHfx8A"/>
+<span class="absolute bottom-1.5 left-1.5 px-2 py-0.5 rounded bg-inverse-surface/80 text-inverse-on-surface font-label-sm text-label-sm">Before (Reported)</span>
+</div>
+<div class="relative rounded-lg overflow-hidden h-28 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="After photo of a clean sanitized paved sidewalk beside a green garden park with decorative flower pots preventing re-dumping, sunny afternoon." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6QxGsPGKeWReGnAr9M9kz9HeWqOM98n05KET9oSCPf0cluQPY29LlkeJ_SWcUrtXYjzceao95VPojTmUPXYGYXMttNThWSWEI5NDm0p5qmL6cQ1kkZmrHMOoh86Q_1tElZwU-Rg7LXFUla_v1gIInUIJY0XPVDrvgG_4AG_jI3DA7X7Z3a-Ej6oWLs9Tzq7uBIEiYDtgymOstqwE6PmK1b4HsFP_CIEB11tMyL6U"/>
+<span class="absolute bottom-1.5 left-1.5 px-2 py-0.5 rounded bg-secondary text-on-secondary font-label-sm text-label-sm">After (Beautified)</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">thumb_up</span>
+<span>112 verified residents approved</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Today, 11:15 AM</span>
+</div>
+</div>
+</section>
+<!-- Civic Helpline & Trust Banner -->
+<section class="px-gutter-mobile py-space-md">
+<div class="p-4 rounded-xl bg-surface-container flex flex-col gap-3">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-primary text-on-primary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]">phone_in_talk</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Immediate Emergency Line</span>
+<a class="font-title-lg text-title-lg text-primary font-bold hover:underline" href="tel:1533">1533 BBMP Sahaaya 24x7</a>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        For severe waterlogging, fallen trees across arterial transit corridors, or live electrical hazard wire snaps, dial Sahaaya immediately for instant emergency squad dispatch.
+      </p>
+</div>
+</section>
+<!-- Municipal Footer & Project Credit -->
+<footer class="px-gutter-mobile pt-space-sm pb-space-lg flex flex-col gap-space-md">
+<div class="p-3.5 rounded-xl bg-surface-container-lowest shadow-sm flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">school</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface">B.Tech AIML Capstone Project</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Intelligent Multi-Agent Civic Perception &amp; Automated Redressal</span>
+</div>
+</div>
+<!-- Official Links & Policy -->
+<div class="flex flex-wrap items-center justify-between gap-2 pt-1">
+<div class="flex items-center gap-3 font-label-sm text-label-sm text-on-surface-variant">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<span>•</span>
+<a class="hover:text-primary transition-colors" href="#">Citizen Charter</a>
+<span>•</span>
+<a class="hover:text-primary transition-colors" href="#">BBMP API Terms</a>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">CivicSense v2.4</span>
+</div>
+</footer>
+</div>
+<script>
+  // Quick Micro-interactions for Mobile Landing
+  document.querySelectorAll('a[data-path]').forEach(link => {
+    link.addEventListener('click', (e) => {
+      // Provide subtle tactile response if supported
+      if (window.navigator && window.navigator.vibrate) {
+        window.navigator.vibrate(12);
+      }
+    });
+  });
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.05)]" data-active-classes="text-secondary"><div class="flex items-center justify-around h-20 px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center gap-1 w-14 h-14 transition-colors min-w-[44px] min-h-[44px] text-secondary" data-path="home-overview" href="#"><span class="material-symbols-outlined text-[22px]">home</span><span class="font-label-sm text-label-sm">Home</span></a><a class="flex flex-col items-center justify-center gap-1 w-14 h-14 text-on-surface-variant hover:text-on-surface transition-colors min-w-[44px] min-h-[44px]" data-path="citizen-tracker" href="#"><span class="material-symbols-outlined text-[22px]">track_changes</span><span class="font-label-sm text-label-sm">Tracker</span></a><a class="relative flex flex-col items-center justify-center -top-3 group min-w-[44px] min-h-[44px]" data-path="report-issue" href="#"><div class="w-12 h-12 rounded-xl bg-primary text-on-primary flex items-center justify-center shadow-lg shadow-primary/25 group-active:scale-95 transition-transform"><span class="material-symbols-outlined text-[26px]">add</span></div><span class="font-label-sm text-label-sm text-on-surface-variant mt-1 group-hover:text-primary transition-colors">Report</span></a><a class="flex flex-col items-center justify-center gap-1 w-14 h-14 text-on-surface-variant hover:text-on-surface transition-colors min-w-[44px] min-h-[44px]" data-path="ai-analytics" href="#"><span class="material-symbols-outlined text-[22px]">insights</span><span class="font-label-sm text-label-sm">Insights</span></a><a class="flex flex-col items-center justify-center gap-1 w-14 h-14 text-on-surface-variant hover:text-on-surface transition-colors min-w-[44px] min-h-[44px]" data-path="admin-portal" href="#"><span class="material-symbols-outlined text-[22px]">shield_person</span><span class="font-label-sm text-label-sm">Admin</span></a></div></nav></body></html>

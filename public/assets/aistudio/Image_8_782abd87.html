@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><title>CivicSense AI</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-fixed-variant": "#653e00", "surface-container-low": "#eff4ff", "on-primary-fixed-variant": "#264872", "on-primary-container": "#86a6d6", "surface-container-lowest": "#ffffff", "on-secondary-container": "#006f6b", "on-secondary-fixed": "#00201f", "surface-variant": "#d3e4fe", "outline": "#73777f", "on-secondary": "#ffffff", "tertiary-container": "#543300", "inverse-surface": "#213145", "on-tertiary-fixed": "#2a1700", "on-primary-fixed": "#001c3a", "secondary": "#006a66", "error": "#ba1a1a", "on-tertiary": "#ffffff", "on-error-container": "#93000a", "surface-container-highest": "#d3e4fe", "tertiary": "#372000", "surface-container-high": "#dce9ff", "secondary-fixed-dim": "#60d9d3", "secondary-container": "#7bf3ed", "on-tertiary-container": "#e49200", "on-surface": "#0b1c30", "on-primary": "#ffffff", "outline-variant": "#c3c6d0", "on-error": "#ffffff", "inverse-on-surface": "#eaf1ff", "tertiary-fixed": "#ffddb8", "surface": "#f8f9ff", "surface-tint": "#3f608c", "surface-bright": "#f8f9ff", "primary-container": "#173b65", "primary-fixed-dim": "#a8c8fa", "on-secondary-fixed-variant": "#00504d", "error-container": "#ffdad6", "secondary-fixed": "#7ef5ef", "on-background": "#0b1c30", "primary": "#00254a", "inverse-primary": "#a8c8fa", "surface-container": "#e5eeff", "background": "#f8f9ff", "tertiary-fixed-dim": "#ffb95f", "on-surface-variant": "#43474f", "primary-fixed": "#d4e3ff", "surface-dim": "#cbdbf5" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin": "2rem", "space-xl": "2.5rem", "space-md": "1rem", "space-sm": "0.5rem", "gutter": "1.5rem", "space-lg": "1.5rem", "margin-mobile": "1rem", "space-xs": "0.25rem", "gutter-mobile": "1rem" }, "fontFamily": { "label-sm": ["Inter"], "title-lg": ["Inter"], "headline-lg": ["Inter"], "body-md": ["Inter"], "display-mobile": ["Inter"], "headline-md": ["Inter"], "code-sm": ["Inter"], "headline-lg-mobile": ["Inter"], "display": ["Inter"], "body-sm": ["Inter"], "headline-sm": ["Inter"], "title-sm": ["Inter"], "title-md": ["Inter"], "label-md": ["Inter"], "body-lg": ["Inter"] }, "fontSize": { "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "600" }], "title-lg": ["18px", { "lineHeight": "26px", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "display-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "code-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "display": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "title-sm": ["14px", { "lineHeight": "20px", "fontWeight": "600" }], "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }] } } } }</script><style>@layer base { html, body { width: 100vw; margin: 0; padding: 0; min-height: 100%; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md antialiased flex flex-col min-h-screen selection:bg-secondary/20 selection:text-secondary"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="CivicSense AI Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/ALJJyrBoiWz9cVs0zZNXFe295g3tahnBVzX8HrlKZX2l_35olKtqagZf5_iAJ3TaW88AdbxsesaMD7bmP-7ASFgxZCBtD5lqp1q7kDtZT8y8Tgp4QOjNQltWJOVbnZ8cyb90m5c8Ags895fY7ZVVhyEH8QkyG8e-h4KMiZtLnc6rIm9i047jfhIY3V2DbpKu2kKuIABjKfQAUQeL-_HytHiarhhPVZmoRpxiHgA_yi32ncwb"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-title-sm text-title-sm text-primary tracking-tight truncate">CivicSense</span><span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed-variant leading-none font-semibold">AI</span></div><span class="font-label-sm text-label-sm text-on-surface-variant truncate">Citizen Tracker</span></div></div><div class="flex items-center gap-space-xs flex-shrink-0"><a class="hidden sm:flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-primary font-label-sm text-label-sm hover:bg-surface-container-high transition-colors min-h-[44px]" href="tel:1533"><span class="material-symbols-outlined text-[16px] text-secondary">support_agent</span><span>1533 Sahaya</span></a><button aria-label="Notifications" class="relative w-11 h-11 flex items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></button><div class="w-11 h-11 flex items-center justify-center pl-1"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-secondary/30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTZHe1SnNA05IKOQTo3Ujd298FQ9IhpSklK7N9SGgMNUfew8_YIHlJqXUTe7IkiMJsX5E4XC_iBhzI7MoxzEJiqqXPOisLUeFwZSIhR8eSa494JJEgoHFdftqVwiN5wzaBdDXlO7nMtdJpiCSQ9nlD6gUR_ScZ6dgq4Lus5uRPjeqYo2rzQ-xnHESluKtvKeiJXkflnoH5BM6wom7lKgWbvj2gxPgatgS1Fo5kK9Q"/></div></div></div></header><main class="flex-1 w-full bg-surface pt-16 pb-24 relative flex flex-col"><div class="flex flex-col w-full px-gutter-mobile space-y-space-md">
+<!-- Welcome & Citizen Karma Banner -->
+<div class="relative overflow-hidden rounded-xl bg-primary text-on-primary p-space-md shadow-md">
+<div class="absolute -right-6 -bottom-6 w-36 h-36 rounded-full bg-secondary/15 blur-xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary-fixed-dim flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary-fixed">verified_user</span>
+          Citizen Portal
+        </span>
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-fixed-variant shadow-sm">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+<span class="font-label-sm text-label-sm font-semibold">850 Karma</span>
+</div>
+</div>
+<div class="mt-1">
+<h2 class="font-headline-sm text-headline-sm font-semibold tracking-tight text-surface-container-lowest">
+          Welcome back, Rahul Sharma!
+        </h2>
+<p class="font-body-sm text-body-sm text-surface-variant flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[16px] text-secondary-fixed shrink-0">pin_drop</span>
+          Ward 150, Bellandur South • <span class="text-secondary-fixed font-semibold">Civic Champion</span>
+</p>
+</div>
+</div>
+</div>
+<!-- Track by Reference Number Search Bar -->
+<div class="relative w-full">
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3.5 text-[20px] text-outline pointer-events-none">search</span>
+<input class="w-full h-11 pl-10 pr-10 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md placeholder:text-outline shadow-sm focus:outline-none focus:ring-2 focus:ring-secondary/40 transition-all" id="ticketSearchInput" placeholder="Track by Ticket ID (e.g. BLR-2024-8891)..." type="text"/>
+<button aria-label="Clear Search" class="hidden absolute right-3 w-6 h-6 items-center justify-center rounded-full text-outline hover:text-on-surface hover:bg-surface-container transition-colors" id="clearSearchBtn" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+<!-- Primary CTA: Report New Issue -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm relative overflow-hidden group">
+<div class="flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-12 h-12 rounded-xl bg-secondary/15 flex items-center justify-center text-secondary shrink-0 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[26px]">photo_camera</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="font-title-sm text-title-sm text-on-surface truncate">Instant Issue Reporter</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed-variant">AI Auto-Geotag</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Snap road defects or sanitation anomalies</p>
+</div>
+</div>
+<button class="shrink-0 h-10 px-4 rounded-lg bg-primary text-on-primary font-title-sm text-title-sm flex items-center gap-1.5 shadow-sm active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[18px]">add_a_photo</span>
+<span>Report</span>
+</button>
+</div>
+</div>
+<!-- Summary Metric Cards (2x2 Grid) -->
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Card 1: Total Complaints -->
+<div class="bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Total Filed</span>
+<div class="w-7 h-7 rounded-lg bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">folder_open</span>
+</div>
+</div>
+<div class="mt-2 flex items-baseline gap-1.5">
+<span class="font-headline-md text-headline-md font-bold text-primary">14</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Lifetime</span>
+</div>
+</div>
+<!-- Card 2: In Progress -->
+<div class="bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-tertiary-fixed-variant uppercase tracking-wider">In Progress</span>
+<div class="w-7 h-7 rounded-lg bg-tertiary-fixed text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">pending_actions</span>
+</div>
+</div>
+<div class="mt-2 flex items-baseline gap-1.5">
+<span class="font-headline-md text-headline-md font-bold text-on-tertiary-container">03</span>
+<span class="font-label-sm text-label-sm text-on-tertiary-fixed-variant">Active Crews</span>
+</div>
+</div>
+<!-- Card 3: Resolved -->
+<div class="bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Resolved</span>
+<div class="w-7 h-7 rounded-lg bg-secondary-container text-on-secondary-fixed-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">task_alt</span>
+</div>
+</div>
+<div class="mt-2 flex items-baseline gap-1.5">
+<span class="font-headline-md text-headline-md font-bold text-secondary">10</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">71.4% Rate</span>
+</div>
+</div>
+<!-- Card 4: Under Review -->
+<div class="bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-primary-fixed-variant uppercase tracking-wider">Under Review</span>
+<div class="w-7 h-7 rounded-lg bg-surface-container-high text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">troubleshoot</span>
+</div>
+</div>
+<div class="mt-2 flex items-baseline gap-1.5">
+<span class="font-headline-md text-headline-md font-bold text-primary-container">01</span>
+<span class="font-label-sm text-label-sm text-on-primary-fixed-variant">AI Triage</span>
+</div>
+</div>
+</div>
+<!-- Category Breakdown & Ward Statistics -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[20px]">donut_small</span>
+<h3 class="font-title-sm text-title-sm text-on-surface">Ward Issue Breakdown</h3>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Past 30 Days</span>
+</div>
+<!-- Segmented Visual Bar -->
+<div class="w-full h-3 rounded-full bg-surface-container flex overflow-hidden">
+<div class="h-full bg-primary" style="width: 45%" title="Potholes (45%)"></div>
+<div class="h-full bg-secondary" style="width: 30%" title="Waste &amp; Sanitation (30%)"></div>
+<div class="h-full bg-tertiary-fixed-dim" style="width: 15%" title="Streetlights (15%)"></div>
+<div class="h-full bg-secondary-fixed-dim" style="width: 10%" title="Drainage (10%)"></div>
+</div>
+<!-- Legend Micro Grid -->
+<div class="grid grid-cols-2 gap-y-1.5 gap-x-2 pt-1">
+<div class="flex items-center justify-between p-1.5 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-1.5 min-w-0">
+<div class="w-2.5 h-2.5 rounded-full bg-primary shrink-0"></div>
+<span class="font-body-sm text-body-sm text-on-surface truncate">Potholes</span>
+</div>
+<span class="font-label-sm text-label-sm font-semibold text-primary">45%</span>
+</div>
+<div class="flex items-center justify-between p-1.5 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-1.5 min-w-0">
+<div class="w-2.5 h-2.5 rounded-full bg-secondary shrink-0"></div>
+<span class="font-body-sm text-body-sm text-on-surface truncate">Waste / Garbage</span>
+</div>
+<span class="font-label-sm text-label-sm font-semibold text-secondary">30%</span>
+</div>
+<div class="flex items-center justify-between p-1.5 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-1.5 min-w-0">
+<div class="w-2.5 h-2.5 rounded-full bg-tertiary-fixed-dim shrink-0"></div>
+<span class="font-body-sm text-body-sm text-on-surface truncate">Streetlights</span>
+</div>
+<span class="font-label-sm text-label-sm font-semibold text-on-tertiary-container">15%</span>
+</div>
+<div class="flex items-center justify-between p-1.5 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-1.5 min-w-0">
+<div class="w-2.5 h-2.5 rounded-full bg-secondary-fixed-dim shrink-0"></div>
+<span class="font-body-sm text-body-sm text-on-surface truncate">Drainage</span>
+</div>
+<span class="font-label-sm text-label-sm font-semibold text-secondary">10%</span>
+</div>
+</div>
+</div>
+<!-- Recent Grievances Header & Filter Chips -->
+<div class="space-y-space-xs pt-1">
+<div class="flex items-center justify-between">
+<h3 class="font-title-lg text-title-lg text-on-surface">Recent Reports</h3>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Real-time BBMP Sync</span>
+</div>
+<!-- Filter Chips -->
+<div class="flex items-center gap-2 overflow-x-auto pb-1" id="filterTabs">
+<button class="filter-chip active h-8 px-3.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm shadow-sm transition-all shrink-0" data-filter="all" type="button">
+        All (14)
+      </button>
+<button class="filter-chip h-8 px-3.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm hover:bg-surface-container-high transition-all shrink-0" data-filter="active" type="button">
+        Active (4)
+      </button>
+<button class="filter-chip h-8 px-3.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm hover:bg-surface-container-high transition-all shrink-0" data-filter="resolved" type="button">
+        Resolved (10)
+      </button>
+</div>
+</div>
+<!-- Issue Cards Container -->
+<div class="flex flex-col space-y-space-sm" id="complaintsList">
+<!-- Card 1: Pothole (In Progress) -->
+<div class="complaint-card active-status bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-sm" data-id="BLR-2024-8891" data-type="active">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-code-sm text-code-sm font-semibold text-primary">#BLR-2024-8891</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">BBMP Major Roads</span>
+</div>
+<h4 class="font-title-sm text-title-sm text-on-surface font-semibold mt-1">
+            Severe Pothole near Outer Ring Road flyover, Bellandur
+          </h4>
+</div>
+<span class="shrink-0 px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-container font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container animate-pulse"></span>
+          IN PROGRESS
+        </span>
+</div>
+<!-- Photo & Context Layout -->
+<div class="flex items-center gap-3">
+<img class="w-20 h-20 rounded-lg object-cover bg-surface-container shrink-0" data-alt="Close-up photograph of an asphalt road pothole on a busy urban highway in Bengaluru with visible road cracks, marked with civic measuring spray chalk in daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQdkFFICLX-5lb90p_vxFUnlgCIM2d3bRPUU53QN6i2SyvzJ861iEN4c3nFZWUAF_c26rmUzxEiBWqOs1ZR77mqG1AC1aT4u7t0pCHYlKLG4zo2W0h2r28xXj-_FHjBuPIG2jQnnZ8t1LY1k1XWfhaFZJQN_CPR9l0ntqyGwcj7oW7ITfS1Ae8ZRXuYiS9kK7lSpj0yUr8cDh4OaISL_dRJYpEQ_zurlq-hSpGldg"/>
+<div class="flex flex-col justify-between h-20 py-0.5 min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">psychology</span>
+              AI: 98% Severe Damage
+            </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">
+            Assigned: <span class="text-on-surface font-medium">BBMP PWD Ward Crew #3</span>
+</p>
+<div class="flex items-center gap-1 text-on-tertiary-container font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px]">schedule</span>
+<span>Est. Repair Completion: ~6 Hours</span>
+</div>
+</div>
+</div>
+<!-- Live Dispatch Status Bar -->
+<div class="pt-2 border-t-0 bg-surface-container-low rounded-lg p-2.5 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">fire_truck</span>
+<span class="font-body-sm text-body-sm text-on-surface">Hot-mix tanker dispatched from Mahadevapura</span>
+</div>
+<button class="text-secondary font-label-sm text-label-sm hover:underline shrink-0" type="button">
+          Live Track
+        </button>
+</div>
+</div>
+<!-- Card 2: Garbage Overflow (Resolved) -->
+<div class="complaint-card resolved-status bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-sm" data-id="BLR-2024-7620" data-type="resolved">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-code-sm text-code-sm font-semibold text-primary">#BLR-2024-7620</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Solid Waste Mgmt</span>
+</div>
+<h4 class="font-title-sm text-title-sm text-on-surface font-semibold mt-1">
+            Garbage heap overflow near 27th Main HSR Layout
+          </h4>
+</div>
+<span class="shrink-0 px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+          RESOLVED
+        </span>
+</div>
+<!-- Photo & Resolution Verification -->
+<div class="flex items-center gap-3">
+<img class="w-20 h-20 rounded-lg object-cover bg-surface-container shrink-0" data-alt="Clean cleared municipal street sidewalk in HSR layout Bangalore with freshly sanitized stone pavers, free of debris, bright sunny afternoon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeht5MVfpPsAJbFg7l6NfcfXtgsQZLOUYNSnxoQAJNeCOlEBZ0b30Fq22b5mF9cAX1dhnNuOHvICNUimQkGrUhcwV6e1jww7Z7bIU77fH4R8mNhU9cuYoF6gzLT_bIegCPNIdl3dTAAZUJWXlt3KsEd1AFDIeTN90WJBDVZWXTbS7U_g1NPw2YAfKAp_qjoHWRgNG_fLn6IY7L9vqiR_lQ5fn1gtbELZrciD0t4E4"/>
+<div class="flex flex-col justify-between h-20 py-0.5 min-w-0">
+<div class="flex items-center gap-1">
+<span class="px-2 py-0.5 rounded-full bg-secondary/10 text-secondary font-label-sm text-label-sm font-medium">
+              Verified by Inspector Suresh K.
+            </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Status: <span class="text-secondary font-medium">Cleared &amp; Sanitized</span>
+</p>
+<div class="flex items-center gap-1 text-outline font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px]">event_available</span>
+<span>Closed 2 days ago • +50 Karma earned</span>
+</div>
+</div>
+</div>
+<!-- Feedback Micro Action -->
+<div class="bg-surface-container-low rounded-lg p-2.5 flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface">Satisfied with the cleanup quality?</span>
+<div class="flex items-center gap-2">
+<button class="p-1 rounded text-secondary hover:bg-secondary-container transition-colors" title="Satisfied" type="button">
+<span class="material-symbols-outlined text-[18px]">thumb_up</span>
+</button>
+<button class="p-1 rounded text-outline hover:text-error transition-colors" title="Not satisfied" type="button">
+<span class="material-symbols-outlined text-[18px]">thumb_down</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 3: Streetlight (Assigned / Active) -->
+<div class="complaint-card active-status bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-sm" data-id="BLR-2024-6512" data-type="active">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-code-sm text-code-sm font-semibold text-primary">#BLR-2024-6512</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">BESCOM South</span>
+</div>
+<h4 class="font-title-sm text-title-sm text-on-surface font-semibold mt-1">
+            Non-functional streetlight outside Green Glen Layout
+          </h4>
+</div>
+<span class="shrink-0 px-2.5 py-1 rounded-full bg-surface-variant text-primary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">assignment_ind</span>
+          ASSIGNED
+        </span>
+</div>
+<div class="flex items-center gap-3">
+<img class="w-20 h-20 rounded-lg object-cover bg-surface-container shrink-0" data-alt="Dusk photograph of a modern residential avenue in Green Glen Layout Bangalore with a tall concrete utility streetlight pole that is switched off against evening sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdA6mlSY-zT6C5XBOcbQWiFYqCfWIL5Efz9KwrDENEQ6YZkTiwepsMT0_N6b3ZDrM6Mbl-txtK3L4ezFYk9iKDyqJoEAbCelynCETXdyWFHJZkAiYOH4iFldkJKyfFMAYjny6Xx1zFQK4RkJuDFF6drb7Wx9mi1iu3wOstSbjGABGq0DuxzzVTMHkE3bndAXfug-AsnIzRafcHvEuveRFw4FynaYMNWnnXqvlwR-U"/>
+<div class="flex flex-col justify-between h-20 py-0.5 min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">
+              High Priority • Dark Spot
+            </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">
+            Assigned: <span class="text-on-surface font-medium">BESCOM Ward Team 4</span>
+</p>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px]">build</span>
+<span>Bulb / Line fuse inspection pending</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Empty Search State -->
+<div class="hidden py-8 flex flex-col items-center justify-center text-center p-space-md bg-surface-container-lowest rounded-xl" id="emptySearchNotice">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-outline mb-2">
+<span class="material-symbols-outlined text-[24px]">search_off</span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface font-medium">No complaints match your query</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Double check reference ticket number or try clearing filters.</p>
+</div>
+</div>
+<!-- Ward Community Assistance Widget -->
+<div class="bg-surface-container-high/60 rounded-xl p-space-md flex items-center justify-between gap-space-sm mb-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">forum</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-primary font-semibold">Ward 150 Citizens Forum</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Discuss community resolutions &amp; park upkeep</span>
+</div>
+</div>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-primary font-label-sm text-label-sm shadow-sm hover:bg-surface-container-low transition-colors shrink-0" type="button">
+      Join Discussion
+    </button>
+</div>
+</div>
+<script>
+  (function initDashboard() {
+    const searchInput = document.getElementById('ticketSearchInput');
+    const clearBtn = document.getElementById('clearSearchBtn');
+    const filterButtons = document.querySelectorAll('.filter-chip');
+    const cards = document.querySelectorAll('.complaint-card');
+    const emptyNotice = document.getElementById('emptySearchNotice');
+
+    let currentFilter = 'all';
+
+    function applyFilters() {
+      const query = (searchInput.value || '').trim().toLowerCase();
+      let visibleCount = 0;
+
+      cards.forEach(card => {
+        const cardId = (card.getAttribute('data-id') || '').toLowerCase();
+        const cardType = card.getAttribute('data-type');
+        const cardText = card.innerText.toLowerCase();
+
+        const matchesQuery = !query || cardId.includes(query) || cardText.includes(query);
+        const matchesCategory = currentFilter === 'all' || cardType === currentFilter;
+
+        if (matchesQuery && matchesCategory) {
+          card.classList.remove('hidden');
+          visibleCount++;
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+
+      if (visibleCount === 0) {
+        emptyNotice.classList.remove('hidden');
+      } else {
+        emptyNotice.classList.add('hidden');
+      }
+
+      if (query.length > 0) {
+        clearBtn.classList.remove('hidden');
+        clearBtn.classList.add('flex');
+      } else {
+        clearBtn.classList.add('hidden');
+        clearBtn.classList.remove('flex');
+      }
+    }
+
+    searchInput.addEventListener('input', applyFilters);
+
+    clearBtn.addEventListener('click', () => {
+      searchInput.value = '';
+      applyFilters();
+      searchInput.focus();
+    });
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => {
+          b.classList.remove('bg-primary', 'text-on-primary');
+          b.classList.add('bg-surface-container', 'text-on-surface-variant');
+        });
+        btn.classList.add('bg-primary', 'text-on-primary');
+        btn.classList.remove('bg-surface-container', 'text-on-surface-variant');
+
+        currentFilter = btn.getAttribute('data-filter');
+        applyFilters();
+      });
+    });
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.05)]" data-active-classes="text-secondary"><div class="flex items-center justify-around h-20 px-space-xs"><a class="flex flex-col items-center justify-center gap-1 w-14 h-14 text-on-surface-variant hover:text-on-surface transition-colors min-w-[44px] min-h-[44px]" data-path="home-overview" href="#"><span class="material-symbols-outlined text-[22px]">home</span><span class="font-label-sm text-label-sm">Home</span></a><a aria-current="page" class="flex flex-col items-center justify-center gap-1 w-14 h-14 transition-colors min-w-[44px] min-h-[44px] text-secondary" data-path="citizen-tracker" href="#"><span class="material-symbols-outlined text-[22px]">track_changes</span><span class="font-label-sm text-label-sm">Tracker</span></a><a class="relative flex flex-col items-center justify-center -top-3 group min-w-[44px] min-h-[44px]" data-path="report-issue" href="#"><div class="w-12 h-12 rounded-xl bg-primary text-on-primary flex items-center justify-center shadow-lg shadow-primary/25 group-active:scale-95 transition-transform"><span class="material-symbols-outlined text-[26px]">add</span></div><span class="font-label-sm text-label-sm text-on-surface-variant mt-1 group-hover:text-primary transition-colors">Report</span></a><a class="flex flex-col items-center justify-center gap-1 w-14 h-14 text-on-surface-variant hover:text-on-surface transition-colors min-w-[44px] min-h-[44px]" data-path="ai-analytics" href="#"><span class="material-symbols-outlined text-[22px]">insights</span><span class="font-label-sm text-label-sm">Insights</span></a><a class="flex flex-col items-center justify-center gap-1 w-14 h-14 text-on-surface-variant hover:text-on-surface transition-colors min-w-[44px] min-h-[44px]" data-path="admin-portal" href="#"><span class="material-symbols-outlined text-[22px]">shield_person</span><span class="font-label-sm text-label-sm">Admin</span></a></div></nav></body></html>

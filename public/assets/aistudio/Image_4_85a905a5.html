@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><title>CivicSense AI</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-fixed-variant": "#653e00", "surface-container-low": "#eff4ff", "on-primary-fixed-variant": "#264872", "on-primary-container": "#86a6d6", "surface-container-lowest": "#ffffff", "on-secondary-container": "#006f6b", "on-secondary-fixed": "#00201f", "surface-variant": "#d3e4fe", "outline": "#73777f", "on-secondary": "#ffffff", "tertiary-container": "#543300", "inverse-surface": "#213145", "on-tertiary-fixed": "#2a1700", "on-primary-fixed": "#001c3a", "secondary": "#006a66", "error": "#ba1a1a", "on-tertiary": "#ffffff", "on-error-container": "#93000a", "surface-container-highest": "#d3e4fe", "tertiary": "#372000", "surface-container-high": "#dce9ff", "secondary-fixed-dim": "#60d9d3", "secondary-container": "#7bf3ed", "on-tertiary-container": "#e49200", "on-surface": "#0b1c30", "on-primary": "#ffffff", "outline-variant": "#c3c6d0", "on-error": "#ffffff", "inverse-on-surface": "#eaf1ff", "tertiary-fixed": "#ffddb8", "surface": "#f8f9ff", "surface-tint": "#3f608c", "surface-bright": "#f8f9ff", "primary-container": "#173b65", "primary-fixed-dim": "#a8c8fa", "on-secondary-fixed-variant": "#00504d", "error-container": "#ffdad6", "secondary-fixed": "#7ef5ef", "on-background": "#0b1c30", "primary": "#00254a", "inverse-primary": "#a8c8fa", "surface-container": "#e5eeff", "background": "#f8f9ff", "tertiary-fixed-dim": "#ffb95f", "on-surface-variant": "#43474f", "primary-fixed": "#d4e3ff", "surface-dim": "#cbdbf5" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin": "2rem", "space-xl": "2.5rem", "space-md": "1rem", "space-sm": "0.5rem", "gutter": "1.5rem", "space-lg": "1.5rem", "margin-mobile": "1rem", "space-xs": "0.25rem", "gutter-mobile": "1rem" }, "fontFamily": { "label-sm": ["Inter"], "title-lg": ["Inter"], "headline-lg": ["Inter"], "body-md": ["Inter"], "display-mobile": ["Inter"], "headline-md": ["Inter"], "code-sm": ["Inter"], "headline-lg-mobile": ["Inter"], "display": ["Inter"], "body-sm": ["Inter"], "headline-sm": ["Inter"], "title-sm": ["Inter"], "title-md": ["Inter"], "label-md": ["Inter"], "body-lg": ["Inter"] }, "fontSize": { "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "600" }], "title-lg": ["18px", { "lineHeight": "26px", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "display-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "code-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "display": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "title-sm": ["14px", { "lineHeight": "20px", "fontWeight": "600" }], "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }] } } } }</script><style>@layer base { html, body { width: 100vw; margin: 0; padding: 0; min-height: 100%; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md antialiased flex flex-col min-h-screen selection:bg-secondary/20 selection:text-secondary"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="CivicSense AI Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/ALJJyrBoiWz9cVs0zZNXFe295g3tahnBVzX8HrlKZX2l_35olKtqagZf5_iAJ3TaW88AdbxsesaMD7bmP-7ASFgxZCBtD5lqp1q7kDtZT8y8Tgp4QOjNQltWJOVbnZ8cyb90m5c8Ags895fY7ZVVhyEH8QkyG8e-h4KMiZtLnc6rIm9i047jfhIY3V2DbpKu2kKuIABjKfQAUQeL-_HytHiarhhPVZmoRpxiHgA_yi32ncwb"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-title-sm text-title-sm text-primary tracking-tight truncate">CivicSense</span><span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed-variant leading-none font-semibold">AI</span></div><span class="font-label-sm text-label-sm text-on-surface-variant truncate">Report Issue</span></div></div><div class="flex items-center gap-space-xs flex-shrink-0"><a class="hidden sm:flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-primary font-label-sm text-label-sm hover:bg-surface-container-high transition-colors min-h-[44px]" href="tel:1533"><span class="material-symbols-outlined text-[16px] text-secondary">support_agent</span><span>1533 Sahaya</span></a><button aria-label="Notifications" class="relative w-11 h-11 flex items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></button><div class="w-11 h-11 flex items-center justify-center pl-1"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-secondary/30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTZHe1SnNA05IKOQTo3Ujd298FQ9IhpSklK7N9SGgMNUfew8_YIHlJqXUTe7IkiMJsX5E4XC_iBhzI7MoxzEJiqqXPOisLUeFwZSIhR8eSa494JJEgoHFdftqVwiN5wzaBdDXlO7nMtdJpiCSQ9nlD6gUR_ScZ6dgq4Lus5uRPjeqYo2rzQ-xnHESluKtvKeiJXkflnoH5BM6wom7lKgWbvj2gxPgatgS1Fo5kK9Q"/></div></div></div></header><main class="flex-1 w-full bg-surface pt-16 pb-24 relative flex flex-col"><div class="flex flex-col w-full pb-8">
+<!-- Subtle Context Header Banner -->
+<div class="px-gutter-mobile py-space-sm flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Ward 174 • HSR Layout / Silk Board</span>
+</div>
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-semibold">Triage v2.4</span>
+</div>
+<div class="px-gutter-mobile space-y-space-md">
+<!-- AI Smart Assist Banner -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm relative overflow-hidden">
+<div class="absolute -right-4 -bottom-4 w-24 h-24 rounded-full bg-secondary-container/30 blur-2xl pointer-events-none"></div>
+<div class="flex items-start gap-3">
+<div class="w-9 h-9 rounded-lg bg-secondary text-on-secondary flex items-center justify-center flex-shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">smart_toy</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5">
+<h2 class="font-title-sm text-title-sm text-primary">AI Smart Assist Active</h2>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed-variant font-medium">Auto-Triage</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            Visual models automatically infer category, severity, and civic jurisdiction (BBMP, BESCOM, or BWSSB) in real-time.
+          </p>
+</div>
+</div>
+</div>
+<!-- Photo & Evidence Upload Section -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-sm">
+<div class="flex items-center justify-between">
+<label class="font-title-sm text-title-sm text-primary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">photo_camera</span>
+          Evidence &amp; Site Photos
+        </label>
+<span class="font-label-sm text-label-sm text-on-surface-variant">1 of 3 uploaded</span>
+</div>
+<!-- Upload / Preview Box -->
+<div class="relative rounded-xl overflow-hidden bg-surface-container-high/40 min-h-[190px] flex flex-col justify-end p-space-md">
+<!-- Pothole Image with overlay -->
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="A detailed photo of a large asphalt road pothole in urban Bengaluru near Silk Board intersection, showing fractured road layers, loose aggregate, and accumulated rain puddle water, shot at eye level in daylight with sharp textures and high municipal clarity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmUQnl0BuRQFQiqPkF6SanV-4qzDs_QrX0-43HfcZcKWGeJ1sTlxq4L6zP6zBNvQ5SdZcaMxKVlIx0AoCAppldv85NU4NJCVtlPkiksj14y4zkeSOkYSqRpnnj3OR_dyeDsuAtu32wChUhbWy2T3PMIt72_FAVQXKemjuoNgsyXVEjsismlrHVkafahzokbvLN5rFtbhK6t1tMXrvjhhMrJq312pa9UYBtFLktqoQ"/>
+<!-- Subtle image gradient scrim for text readability -->
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/30 to-transparent"></div>
+<!-- Vision Model Bounding Box Annotation -->
+<div class="absolute top-4 left-4 z-10 bg-primary/70 backdrop-blur-md px-2.5 py-1 rounded-md text-on-primary flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[14px] text-secondary-fixed">center_focus_strong</span>
+<span class="font-code-sm text-code-sm">Road_Fracture_01 • 97.4%</span>
+</div>
+<button aria-label="Retake Photo" class="absolute top-4 right-4 z-10 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-on-surface flex items-center justify-center hover:bg-surface-container-lowest transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">replay</span>
+</button>
+<!-- Detected Tag Chip inside bottom edge -->
+<div class="relative z-10 bg-surface-container-lowest/95 backdrop-blur-md rounded-lg p-2.5 shadow-md flex items-start gap-2.5">
+<div class="w-6 h-6 rounded-full bg-error-container text-on-error-container flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">warning</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="font-label-sm text-label-sm text-primary font-bold">AI Detected:</span>
+<span class="font-label-sm text-label-sm text-on-surface">Road Damage / Deep Pothole</span>
+</div>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-label-sm text-label-sm px-1.5 py-0.2 rounded bg-error-container text-on-error-container font-semibold">High Severity</span>
+<span class="font-code-sm text-code-sm text-secondary font-medium">Confidence 97.4%</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Add extra photo trigger -->
+<div class="flex items-center gap-2 pt-1">
+<button class="flex-1 py-2 px-3 rounded-lg bg-surface-container-low hover:bg-surface-container text-primary font-label-sm text-label-sm flex items-center justify-center gap-1.5 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">add_a_photo</span>
+          Add Supplementary Angle
+        </button>
+<button class="py-2 px-3 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-sm text-label-sm flex items-center justify-center gap-1.5 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">mic</span>
+          Voice Memo
+        </button>
+</div>
+</div>
+<!-- Category Selector Dropdown -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-title-sm text-title-sm text-primary flex items-center gap-1.5" for="category-select">
+<span class="material-symbols-outlined text-[18px] text-secondary">account_tree</span>
+          Civic Category &amp; Agency
+        </label>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">BBMP Roads</span>
+</div>
+<div class="relative">
+<select class="w-full h-11 px-3.5 pr-10 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md appearance-none focus:outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_rgba(0,106,102,0.3)] transition-all cursor-pointer" id="category-select">
+<option selected="" value="roads">Roads &amp; Footpaths (Potholes / Broken Pavers) — BBMP</option>
+<option value="garbage">Garbage &amp; Sanitation (Solid Waste Dump) — BBMP SWM</option>
+<option value="water">Water Leakage &amp; Pipeline Burst — BWSSB</option>
+<option value="streetlights">Streetlights &amp; Dangling Cables — BESCOM</option>
+<option value="drainage">Storm Water Drainage &amp; Rajakaluve — BBMP SWD</option>
+<option value="animals">Stray Animal Distress &amp; Animal Control — BBMP AH</option>
+</select>
+<div class="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant flex items-center">
+<span class="material-symbols-outlined text-[20px]">expand_more</span>
+</div>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Auto-routed to BBMP Executive Engineer (South Zone Division).</p>
+</div>
+<!-- Issue Description -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-title-sm text-title-sm text-primary flex items-center gap-1.5" for="issue-description">
+<span class="material-symbols-outlined text-[18px] text-secondary">description</span>
+          Issue Description
+        </label>
+<span class="font-code-sm text-code-sm text-on-surface-variant" id="char-counter">142/500</span>
+</div>
+<div class="relative">
+<textarea class="w-full p-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_rgba(0,106,102,0.3)] transition-all resize-none" id="issue-description" maxlength="500" placeholder="Provide additional details regarding hazard depth, traffic impedance, or nearby landmarks..." rows="3">Deep pothole dangerous for 2-wheelers near Silk Board junction exit towards HSR Layout. Expanding after yesterday's rain.</textarea>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-[15px]">auto_fix_high</span>
+<button class="font-label-sm text-label-sm font-semibold hover:underline" type="button">Enhance with Civic AI Clarity</button>
+</div>
+<button class="font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface" type="button">Clear</button>
+</div>
+</div>
+<!-- Location Input with Vector Map Preview -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-sm">
+<div class="flex items-center justify-between">
+<label class="font-title-sm text-title-sm text-primary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">location_on</span>
+          Incident Geolocation
+        </label>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary/10 text-secondary font-semibold">GPS Locked ±3m</span>
+</div>
+<!-- Address Readout Box -->
+<div class="p-2.5 rounded-lg bg-surface-container-low flex items-start gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-primary mt-0.5">pin_drop</span>
+<div class="flex-1 min-w-0">
+<p class="font-title-sm text-title-sm text-primary truncate">Outer Ring Road, near Central Silk Board</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Bengaluru, Karnataka • 560068</p>
+</div>
+</div>
+<!-- Landmark Input -->
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1" for="landmark-input">Specific Landmark / Directional Anchor</label>
+<div class="relative">
+<input class="w-full h-10 px-3.5 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_rgba(0,106,102,0.3)] transition-all" id="landmark-input" placeholder="e.g. Near Metro Pillar #412" type="text" value="Opposite IOCL Petrol Pump"/>
+</div>
+</div>
+<!-- Vector Map Preview Container -->
+<div class="relative rounded-xl overflow-hidden h-36 bg-surface-container-high shadow-inner">
+<!-- Interactive Location Trigger via data-location -->
+<div class="w-full h-full bg-cover bg-center" data-location="Central Silk Board, Outer Ring Road, Bengaluru" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDYy5BpAT1WmMf6Li_wa22DLx-_MP8phqfXAgaCzsRlOehifJZxQxUuJp6wSNVvxAgKCV4cACk85EIqINxO2eqnwLiJLNMukn6JBTGXEooW4ZQpPEfC6P5uL3n_jywkJTK1jv4t9QsnSk-gCkOMA0SWmqfNjemuiv8d3KPqxWz4Y6kmxwyZAXsTJAjWD6ZWHCWe70CAyaOM2rfr1e7dBrHnhbB5QN-E0QHQqUn6p60')"></div>
+<!-- Simulated Civic GIS Radar Overlay -->
+<div class="absolute inset-0 bg-primary/20 pointer-events-none flex items-center justify-center">
+<!-- Pulsing Radius Radar -->
+<div class="w-20 h-20 rounded-full bg-secondary/20 animate-ping absolute"></div>
+<div class="w-12 h-12 rounded-full bg-secondary/30 flex items-center justify-center backdrop-blur-xs shadow-md">
+<span class="material-symbols-outlined text-[24px] text-on-primary">location_pin</span>
+</div>
+</div>
+<!-- Ward 174 Floating Pill -->
+<div class="absolute top-2.5 left-2.5 bg-primary/85 backdrop-blur-md px-2.5 py-1 rounded-full text-on-primary font-label-sm text-label-sm flex items-center gap-1 shadow-md">
+<span class="material-symbols-outlined text-[14px] text-secondary-container">domain</span>
+<span>Ward 174 (Madivala Sub-div)</span>
+</div>
+<!-- Map Layer Switcher / Recalibrate Mini Bar -->
+<div class="absolute bottom-2.5 right-2.5 bg-surface-container-lowest/90 backdrop-blur-md px-2 py-1 rounded-lg text-primary font-label-sm text-label-sm flex items-center gap-1 shadow-md">
+<span class="material-symbols-outlined text-[14px] text-secondary">layers</span>
+<span>GIS Cadastral</span>
+</div>
+</div>
+<!-- Recalculate GPS Button -->
+<button class="w-full py-2 px-3 rounded-lg bg-surface-container-low hover:bg-surface-container text-primary font-label-sm text-label-sm flex items-center justify-center gap-1.5 transition-colors" id="recalc-gps-btn" type="button">
+<span class="material-symbols-outlined text-[16px] text-secondary">my_location</span>
+        Recalculate Current GPS Location
+      </button>
+</div>
+<!-- Urgency Level Selector -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-sm">
+<div class="flex items-center justify-between">
+<label class="font-title-sm text-title-sm text-primary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">speed</span>
+          Urgency Level
+        </label>
+<span class="font-label-sm text-label-sm text-error font-semibold">Priority SLA: 24h</span>
+</div>
+<!-- 3 Tier Urgency Grid -->
+<div class="grid grid-cols-3 gap-2" id="urgency-selector">
+<!-- Low -->
+<button class="urgency-option py-2.5 px-2 rounded-xl bg-surface-container-low text-on-surface flex flex-col items-center justify-center gap-1 transition-all" data-urgency="low" type="button">
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant">check_circle</span>
+<span class="font-label-sm text-label-sm font-medium">Low</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant text-[10px]">7 Days SLA</span>
+</button>
+<!-- Moderate -->
+<button class="urgency-option py-2.5 px-2 rounded-xl bg-surface-container-low text-on-surface flex flex-col items-center justify-center gap-1 transition-all" data-urgency="moderate" type="button">
+<span class="material-symbols-outlined text-[20px] text-tertiary-fixed-dim">schedule</span>
+<span class="font-label-sm text-label-sm font-medium">Moderate</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant text-[10px]">48h SLA</span>
+</button>
+<!-- Severe / Hazard (Active Selection) -->
+<button class="urgency-option active py-2.5 px-2 rounded-xl bg-error/10 text-error shadow-sm flex flex-col items-center justify-center gap-1 transition-all" data-urgency="severe" type="button">
+<span class="material-symbols-outlined text-[20px] text-error">emergency</span>
+<span class="font-label-sm text-label-sm font-bold">Severe</span>
+<span class="font-code-sm text-code-sm text-error font-semibold text-[10px]">24h Urgent</span>
+</button>
+</div>
+</div>
+<!-- AI Duplicate Checker Card -->
+<div class="bg-surface-container-high rounded-xl p-space-md shadow-sm relative overflow-hidden">
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">merge</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-title-sm text-title-sm text-primary">Duplicate Clustering Notice</span>
+<span class="font-label-sm text-label-sm px-2 py-0.2 rounded-full bg-secondary text-on-secondary font-bold">+12 Upvotes</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+<span class="font-semibold text-on-surface">2 similar reports</span> detected within 150m. Your report will be automatically merged into Master Ticket <span class="font-semibold text-primary">#BLR-2024-9104</span> to accelerate BBMP escalation priority.
+          </p>
+<div class="mt-2.5 flex items-center gap-3">
+<button class="font-label-sm text-label-sm text-secondary hover:underline font-semibold flex items-center gap-1" type="button">
+<span>View Master Incident Cluster</span>
+<span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Citizen Notification Consent / Preferences -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-fixed-variant flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">sms</span>
+</div>
+<div class="min-w-0">
+<p class="font-title-sm text-title-sm text-primary">SMS &amp; WhatsApp Updates</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Live dispatch alerts to +91 98••• ••812</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer flex-shrink-0">
+<input checked="" class="sr-only peer" id="sms-consent" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface-container-lowest after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-secondary"></div>
+</label>
+</div>
+<!-- Submission CTA & Security Badge -->
+<div class="space-y-space-sm pt-2">
+<button class="w-full h-12 rounded-xl bg-primary text-on-primary font-title-sm text-title-sm flex items-center justify-center gap-2 hover:bg-primary-container active:scale-[0.99] transition-all shadow-lg shadow-primary/20" id="submit-ticket-btn" type="button">
+<span class="material-symbols-outlined text-[20px]">send</span>
+<span>Submit Civic Complaint</span>
+</button>
+<!-- Trust & Encrypted Municipal Handshake Notice -->
+<div class="flex items-center justify-center gap-2 text-on-surface-variant py-1">
+<span class="material-symbols-outlined text-[15px] text-secondary">verified_user</span>
+<span class="font-label-sm text-label-sm">BBMP Integrated Grievance Portal • 256-Bit Encrypted Direct Dispatch</span>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    // Character counter sync
+    const descInput = document.getElementById('issue-description');
+    const counter = document.getElementById('char-counter');
+    if (descInput && counter) {
+      descInput.addEventListener('input', (e) => {
+        counter.textContent = `${e.target.value.length}/500`;
+      });
+    }
+
+    // Urgency level interactive selector
+    const urgencyButtons = document.querySelectorAll('.urgency-option');
+    urgencyButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        urgencyButtons.forEach(b => {
+          b.classList.remove('active', 'bg-error/10', 'text-error', 'shadow-sm', 'bg-primary/10', 'text-primary');
+          b.classList.add('bg-surface-container-low', 'text-on-surface');
+        });
+        btn.classList.remove('bg-surface-container-low', 'text-on-surface');
+        btn.classList.add('active', 'bg-error/10', 'text-error', 'shadow-sm');
+      });
+    });
+
+    // Recalculate GPS Micro-interaction
+    const recalcBtn = document.getElementById('recalc-gps-btn');
+    if (recalcBtn) {
+      recalcBtn.addEventListener('click', () => {
+        const icon = recalcBtn.querySelector('.material-symbols-outlined');
+        if (icon) {
+          icon.classList.add('animate-spin');
+          setTimeout(() => {
+            icon.classList.remove('animate-spin');
+          }, 800);
+        }
+      });
+    }
+
+    // Submission Toast Feedback
+    const submitBtn = document.getElementById('submit-ticket-btn');
+    if (submitBtn) {
+      submitBtn.addEventListener('click', () => {
+        submitBtn.innerHTML = `
+          <span class="material-symbols-outlined text-[20px] animate-spin">progress_activity</span>
+          <span>Dispatching Ticket to Ward Engineer...</span>
+        `;
+        submitBtn.classList.add('pointer-events-none', 'opacity-90');
+        setTimeout(() => {
+          submitBtn.innerHTML = `
+            <span class="material-symbols-outlined text-[20px]">check_circle</span>
+            <span>Registered: Ticket #BLR-2024-9104</span>
+          `;
+          submitBtn.classList.remove('bg-primary');
+          submitBtn.classList.add('bg-secondary');
+        }, 1200);
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.05)]" data-active-classes="text-secondary"><div class="flex items-center justify-around h-20 px-space-xs"><a class="flex flex-col items-center justify-center gap-1 w-14 h-14 text-on-surface-variant hover:text-on-surface transition-colors min-w-[44px] min-h-[44px]" data-path="home-overview" href="#"><span class="material-symbols-outlined text-[22px]">home</span><span class="font-label-sm text-label-sm">Home</span></a><a class="flex flex-col items-center justify-center gap-1 w-14 h-14 text-on-surface-variant hover:text-on-surface transition-colors min-w-[44px] min-h-[44px]" data-path="citizen-tracker" href="#"><span class="material-symbols-outlined text-[22px]">track_changes</span><span class="font-label-sm text-label-sm">Tracker</span></a><a aria-current="page" class="relative flex flex-col items-center justify-center -top-3 group min-w-[44px] min-h-[44px] text-secondary" data-path="report-issue" href="#"><div class="w-12 h-12 rounded-xl bg-primary text-on-primary flex items-center justify-center shadow-lg shadow-primary/25 group-active:scale-95 transition-transform"><span class="material-symbols-outlined text-[26px]">add</span></div><span class="font-label-sm text-label-sm text-on-surface-variant mt-1 group-hover:text-primary transition-colors">Report</span></a><a class="flex flex-col items-center justify-center gap-1 w-14 h-14 text-on-surface-variant hover:text-on-surface transition-colors min-w-[44px] min-h-[44px]" data-path="ai-analytics" href="#"><span class="material-symbols-outlined text-[22px]">insights</span><span class="font-label-sm text-label-sm">Insights</span></a><a class="flex flex-col items-center justify-center gap-1 w-14 h-14 text-on-surface-variant hover:text-on-surface transition-colors min-w-[44px] min-h-[44px]" data-path="admin-portal" href="#"><span class="material-symbols-outlined text-[22px]">shield_person</span><span class="font-label-sm text-label-sm">Admin</span></a></div></nav></body></html>

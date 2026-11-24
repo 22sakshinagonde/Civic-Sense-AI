@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><title>CivicSense AI</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-fixed-variant": "#653e00", "surface-container-low": "#eff4ff", "on-primary-fixed-variant": "#264872", "on-primary-container": "#86a6d6", "surface-container-lowest": "#ffffff", "on-secondary-container": "#006f6b", "on-secondary-fixed": "#00201f", "surface-variant": "#d3e4fe", "outline": "#73777f", "on-secondary": "#ffffff", "tertiary-container": "#543300", "inverse-surface": "#213145", "on-tertiary-fixed": "#2a1700", "on-primary-fixed": "#001c3a", "secondary": "#006a66", "error": "#ba1a1a", "on-tertiary": "#ffffff", "on-error-container": "#93000a", "surface-container-highest": "#d3e4fe", "tertiary": "#372000", "surface-container-high": "#dce9ff", "secondary-fixed-dim": "#60d9d3", "secondary-container": "#7bf3ed", "on-tertiary-container": "#e49200", "on-surface": "#0b1c30", "on-primary": "#ffffff", "outline-variant": "#c3c6d0", "on-error": "#ffffff", "inverse-on-surface": "#eaf1ff", "tertiary-fixed": "#ffddb8", "surface": "#f8f9ff", "surface-tint": "#3f608c", "surface-bright": "#f8f9ff", "primary-container": "#173b65", "primary-fixed-dim": "#a8c8fa", "on-secondary-fixed-variant": "#00504d", "error-container": "#ffdad6", "secondary-fixed": "#7ef5ef", "on-background": "#0b1c30", "primary": "#00254a", "inverse-primary": "#a8c8fa", "surface-container": "#e5eeff", "background": "#f8f9ff", "tertiary-fixed-dim": "#ffb95f", "on-surface-variant": "#43474f", "primary-fixed": "#d4e3ff", "surface-dim": "#cbdbf5" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin": "2rem", "space-xl": "2.5rem", "space-md": "1rem", "space-sm": "0.5rem", "gutter": "1.5rem", "space-lg": "1.5rem", "margin-mobile": "1rem", "space-xs": "0.25rem", "gutter-mobile": "1rem" }, "fontFamily": { "label-sm": ["Inter"], "title-lg": ["Inter"], "headline-lg": ["Inter"], "body-md": ["Inter"], "display-mobile": ["Inter"], "headline-md": ["Inter"], "code-sm": ["Inter"], "headline-lg-mobile": ["Inter"], "display": ["Inter"], "body-sm": ["Inter"], "headline-sm": ["Inter"], "title-sm": ["Inter"], "title-md": ["Inter"], "label-md": ["Inter"], "body-lg": ["Inter"] }, "fontSize": { "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "600" }], "title-lg": ["18px", { "lineHeight": "26px", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "display-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "code-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "display": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "title-sm": ["14px", { "lineHeight": "20px", "fontWeight": "600" }], "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }] } } } }</script><style>@layer base { html, body { width: 100vw; margin: 0; padding: 0; min-height: 100%; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md antialiased flex flex-col min-h-screen selection:bg-secondary/20 selection:text-secondary"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="CivicSense AI Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/ALJJyrBoiWz9cVs0zZNXFe295g3tahnBVzX8HrlKZX2l_35olKtqagZf5_iAJ3TaW88AdbxsesaMD7bmP-7ASFgxZCBtD5lqp1q7kDtZT8y8Tgp4QOjNQltWJOVbnZ8cyb90m5c8Ags895fY7ZVVhyEH8QkyG8e-h4KMiZtLnc6rIm9i047jfhIY3V2DbpKu2kKuIABjKfQAUQeL-_HytHiarhhPVZmoRpxiHgA_yi32ncwb"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-title-sm text-title-sm text-primary tracking-tight truncate">CivicSense</span><span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed-variant leading-none font-semibold">AI</span></div><span class="font-label-sm text-label-sm text-on-surface-variant truncate">Ai Analytics</span></div></div><div class="flex items-center gap-space-xs flex-shrink-0"><a class="hidden sm:flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-primary font-label-sm text-label-sm hover:bg-surface-container-high transition-colors min-h-[44px]" href="tel:1533"><span class="material-symbols-outlined text-[16px] text-secondary">support_agent</span><span>1533 Sahaya</span></a><button aria-label="Notifications" class="relative w-11 h-11 flex items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></button><div class="w-11 h-11 flex items-center justify-center pl-1"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-secondary/30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTZHe1SnNA05IKOQTo3Ujd298FQ9IhpSklK7N9SGgMNUfew8_YIHlJqXUTe7IkiMJsX5E4XC_iBhzI7MoxzEJiqqXPOisLUeFwZSIhR8eSa494JJEgoHFdftqVwiN5wzaBdDXlO7nMtdJpiCSQ9nlD6gUR_ScZ6dgq4Lus5uRPjeqYo2rzQ-xnHESluKtvKeiJXkflnoH5BM6wom7lKgWbvj2gxPgatgS1Fo5kK9Q"/></div></div></div></header><main class="flex-1 w-full bg-surface pt-16 pb-24 relative flex flex-col"><div class="flex flex-col w-full px-gutter-mobile py-space-md space-y-space-md">
+<!-- Title & Scope Header -->
+<section class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-fixed-variant">
+<span class="material-symbols-outlined text-[14px]">auto_awesome</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Predictive Engine Online</span>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface-variant flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary inline-block animate-ping"></span> Live BBMP Synced
+      </span>
+</div>
+<div>
+<h1 class="font-headline-sm text-headline-sm text-primary tracking-tight">Civic AI Analytics &amp; Intelligence</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+        Citywide Real-time Prediction &amp; Issue Hotspots • Bengaluru Metro Area
+      </p>
+</div>
+<!-- Time Filter Pills -->
+<div class="flex items-center gap-1.5 overflow-x-auto py-1 scrollbar-none -mx-gutter-mobile px-gutter-mobile">
+<button class="px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm whitespace-nowrap active:scale-95 transition-transform">
+        Last 24h
+      </button>
+<button class="px-3.5 py-1.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm shadow-sm whitespace-nowrap flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check</span>
+        Last 7 Days
+      </button>
+<button class="px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm whitespace-nowrap active:scale-95 transition-transform">
+        This Month
+      </button>
+<button class="px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm whitespace-nowrap active:scale-95 transition-transform">
+        Q3 2024
+      </button>
+<button class="w-8 h-8 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+</button>
+</div>
+</section>
+<!-- Key Performance Metrics 2x2 Bento Grid -->
+<section class="grid grid-cols-2 gap-space-sm">
+<!-- Total Complaints -->
+<div class="bg-surface-container-lowest p-3.5 rounded-xl shadow-[0_1px_3px_0_rgba(15,23,42,0.06)] flex flex-col justify-between">
+<div class="flex items-center justify-between mb-2">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">assignment_late</span>
+</div>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded-full bg-error-container text-on-error-container flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[11px]">arrow_upward</span>12.4%
+        </span>
+</div>
+<div>
+<span class="font-headline-sm text-headline-sm text-primary block tracking-tight">18,429</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Total Complaints</span>
+</div>
+<div class="mt-2 pt-2 border-t-0 bg-surface-container-low px-2 py-1 rounded">
+<span class="font-code-sm text-code-sm text-on-surface-variant text-[10px] leading-tight block">vs 16,396 last week</span>
+</div>
+</div>
+<!-- AI Accuracy -->
+<div class="bg-surface-container-lowest p-3.5 rounded-xl shadow-[0_1px_3px_0_rgba(15,23,42,0.06)] flex flex-col justify-between">
+<div class="flex items-center justify-between mb-2">
+<div class="w-8 h-8 rounded-lg bg-secondary-container/40 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">neurology</span>
+</div>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed-variant font-semibold">
+          High Trust
+        </span>
+</div>
+<div>
+<span class="font-headline-sm text-headline-sm text-secondary block tracking-tight">98.7%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Vision AI Accuracy</span>
+</div>
+<div class="mt-2 pt-2 bg-surface-container-low px-2 py-1 rounded">
+<span class="font-code-sm text-code-sm text-on-surface-variant text-[10px] leading-tight block">Trained on 250k+ civic imgs</span>
+</div>
+</div>
+<!-- Resolution Time -->
+<div class="bg-surface-container-lowest p-3.5 rounded-xl shadow-[0_1px_3px_0_rgba(15,23,42,0.06)] flex flex-col justify-between">
+<div class="flex items-center justify-between mb-2">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">timer</span>
+</div>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed-variant flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[11px]">arrow_downward</span>14%
+        </span>
+</div>
+<div>
+<span class="font-headline-sm text-headline-sm text-primary block tracking-tight">28.4 hrs</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Avg Resolution Time</span>
+</div>
+<div class="mt-2 pt-2 bg-surface-container-low px-2 py-1 rounded">
+<span class="font-code-sm text-code-sm text-secondary text-[10px] font-semibold leading-tight block">SLA Target &lt; 36 hrs</span>
+</div>
+</div>
+<!-- Duplicate Hours Saved -->
+<div class="bg-surface-container-lowest p-3.5 rounded-xl shadow-[0_1px_3px_0_rgba(15,23,42,0.06)] flex flex-col justify-between">
+<div class="flex items-center justify-between mb-2">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[18px]">filter_list</span>
+</div>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded-full bg-surface-variant text-primary font-semibold">
+          Auto Merge
+        </span>
+</div>
+<div>
+<span class="font-headline-sm text-headline-sm text-primary block tracking-tight">3,120 hrs</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Engineer Time Saved</span>
+</div>
+<div class="mt-2 pt-2 bg-surface-container-low px-2 py-1 rounded">
+<span class="font-code-sm text-code-sm text-on-surface-variant text-[10px] leading-tight block">4,812 duplicate reports</span>
+</div>
+</div>
+</section>
+<!-- High Priority Predictive AI Insights -->
+<section class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[20px]">psychology</span>
+<h2 class="font-title-md text-title-md text-primary">Autonomous Civic Alerts</h2>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">2 Actionable</span>
+</div>
+<!-- Alert Card 1: Monsoon Pre-emptive -->
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-[0_1px_3px_0_rgba(15,23,42,0.06)] relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-tertiary-fixed-dim"></div>
+<div class="pl-2">
+<div class="flex items-center justify-between gap-2 mb-1.5">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">water_drop</span> Predictive Flood Alert
+          </span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Ward 150</span>
+</div>
+<p class="font-title-sm text-title-sm text-on-surface mb-1">
+          4 drainage choke points detected in Bellandur basin
+        </p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-3">
+          Heavy monsoon forecast trigger (+45mm expected). Silt deposition patterns indicate imminent stormwater backflow onto Outer Ring Road.
+        </p>
+<div class="flex items-center justify-between bg-surface-container-low p-2 rounded-lg">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-surface-container-highest flex items-center justify-center text-primary text-[11px] font-bold">BBMP</span>
+<span class="font-label-sm text-label-sm text-on-surface">Auto-escalated to Stormwater Div</span>
+</div>
+<button class="px-2.5 py-1 rounded-md bg-primary text-on-primary font-label-sm text-label-sm active:scale-95 transition-transform">
+            Dispatch Crew
+          </button>
+</div>
+</div>
+</div>
+<!-- Alert Card 2: Clustered Duplicates -->
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-[0_1px_3px_0_rgba(15,23,42,0.06)] relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-secondary"></div>
+<div class="pl-2">
+<div class="flex items-center justify-between gap-2 mb-1.5">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed-variant font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">join_inner</span> Spatial Duplicate Cluster
+          </span>
+<span class="font-code-sm text-code-sm text-secondary font-semibold">BWSSB South</span>
+</div>
+<p class="font-title-sm text-title-sm text-on-surface mb-1">
+          Sony World Signal: 42 citizen reports grouped
+        </p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-2">
+          Major water main rupture reported across Koramangala 4th Block within 2 hours. Vision model validated geotagged pipeline burst with 99.2% intersection match.
+        </p>
+<div class="flex items-center justify-between text-on-surface-variant pt-1">
+<span class="font-label-sm text-label-sm text-secondary flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[14px]">task_alt</span> Master Ticket #BW-8902 Created
+          </span>
+<span class="font-code-sm text-code-sm bg-surface-container px-2 py-0.5 rounded text-on-surface">42 Notifications Synced</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Geographic Issue Heatmap & Ward Ranking -->
+<section class="bg-surface-container-lowest p-4 rounded-xl shadow-[0_1px_3px_0_rgba(15,23,42,0.06)] space-y-space-md">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-title-md text-title-md text-primary">Ward Density &amp; Hotspots</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Incident clusters across Bengaluru Urban</p>
+</div>
+<span class="px-2 py-1 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">local_fire_department</span> 3 Critical Wards
+      </span>
+</div>
+<!-- Bengaluru Hotspot Map Container -->
+<div class="w-full h-44 rounded-xl bg-surface-container-high relative overflow-hidden flex flex-col justify-end p-3 shadow-inner" data-location="Bengaluru, Karnataka, India" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBmSj5Q-OWnotk6A7P0X7iJG-N3cR-0D1DJ_dt4bN8aIjHLATdXxEyIOdtXHYwmagKJyuTpRu5cLkTqwjlhEyO4Om8xitetb9cttsAFfzPZhm-8lQTeL5zHTn7MCmt4zsBGdnAwTfHQnoskDHnT40ZG93W-83nJ_IrBbw8kItIFcn_ftrNlsbgUuiIE5kYy3JJMydyQluGm1xcCZtpYYozCuSTxGDZJGGfG2jk7hPE')">
+<!-- Simulated GIS Overlay Elements -->
+<div class="absolute inset-0 bg-primary/20 backdrop-blur-[0.5px]"></div>
+<!-- Hotspot Pulsing Rings -->
+<div class="absolute top-1/4 left-1/3 flex items-center justify-center">
+<span class="w-10 h-10 rounded-full bg-error/30 animate-ping absolute"></span>
+<span class="w-5 h-5 rounded-full bg-error text-on-error flex items-center justify-center font-bold text-[9px] shadow-md">94</span>
+</div>
+<div class="absolute top-1/2 right-1/4 flex items-center justify-center">
+<span class="w-8 h-8 rounded-full bg-tertiary-fixed-dim/40 animate-ping absolute"></span>
+<span class="w-4 h-4 rounded-full bg-on-tertiary-container text-surface flex items-center justify-center font-bold text-[8px] shadow-md">68</span>
+</div>
+<!-- Map HUD card -->
+<div class="relative z-10 bg-surface/95 backdrop-blur-md p-2.5 rounded-lg flex items-center justify-between text-on-surface shadow-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">radar</span>
+<div>
+<span class="font-label-sm text-label-sm font-bold block leading-tight text-primary">Live Geofence Radar</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant text-[10px]">Updating telemetry every 15s</span>
+</div>
+</div>
+<button class="px-2 py-1 bg-surface-container text-primary rounded font-label-sm text-label-sm hover:bg-surface-container-high">
+          Expand GIS
+        </button>
+</div>
+</div>
+<!-- Ward Ranking List -->
+<div class="space-y-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Top Impacted Zones</span>
+<!-- Mahadevapura -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-3">
+<span class="w-6 h-6 rounded bg-primary text-on-primary font-bold text-[11px] flex items-center justify-center">1</span>
+<div>
+<span class="font-title-sm text-title-sm text-primary block leading-snug">Mahadevapura (Zone 4)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">IT Corridor • Potholes &amp; Flooding</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-title-sm text-title-sm text-error block font-bold">4,128</span>
+<span class="font-code-sm text-code-sm text-error text-[10px]">+18% spike</span>
+</div>
+</div>
+<!-- Bommanahalli -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-3">
+<span class="w-6 h-6 rounded bg-surface-container-highest text-primary font-bold text-[11px] flex items-center justify-center">2</span>
+<div>
+<span class="font-title-sm text-title-sm text-primary block leading-snug">Bommanahalli (Zone 7)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">Hosur Rd Arterial • Solid Waste</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-title-sm text-title-sm text-on-surface block font-bold">3,490</span>
+<span class="font-code-sm text-code-sm text-secondary text-[10px]">88% triaged</span>
+</div>
+</div>
+<!-- Koramangala -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-3">
+<span class="w-6 h-6 rounded bg-surface-container-highest text-primary font-bold text-[11px] flex items-center justify-center">3</span>
+<div>
+<span class="font-title-sm text-title-sm text-primary block leading-snug">Koramangala (Ward 151)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">Residential South • BWSSB Pipe Works</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-title-sm text-title-sm text-on-surface block font-bold">2,810</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant text-[10px]">-4% normal</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Category Distribution Breakdown -->
+<section class="bg-surface-container-lowest p-4 rounded-xl shadow-[0_1px_3px_0_rgba(15,23,42,0.06)] space-y-space-md">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-title-md text-title-md text-primary">Category Distribution</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Classified by Multi-label Civic Model</p>
+</div>
+<span class="font-code-sm text-code-sm text-secondary font-semibold">100% Parsed</span>
+</div>
+<!-- Stacked Visual Bar -->
+<div class="w-full h-4 rounded-full overflow-hidden flex bg-surface-container">
+<div class="h-full bg-primary" style="width: 38%;" title="Roads: 38%"></div>
+<div class="h-full bg-secondary" style="width: 26%;" title="Waste: 26%"></div>
+<div class="h-full bg-primary-fixed-dim" style="width: 18%;" title="Water: 18%"></div>
+<div class="h-full bg-tertiary-fixed-dim" style="width: 12%;" title="Lighting: 12%"></div>
+<div class="h-full bg-surface-variant" style="width: 6%;" title="Drainage: 6%"></div>
+</div>
+<!-- Interactive Progress Rows -->
+<div class="space-y-3 pt-1">
+<!-- Potholes -->
+<div class="space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-title-sm text-title-sm text-on-surface flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-primary inline-block"></span>
+            Road Damages &amp; Potholes (BBMP)
+          </span>
+<span class="font-label-sm text-label-sm text-primary font-bold">38% (7,003)</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 38%;"></div>
+</div>
+</div>
+<!-- Solid Waste -->
+<div class="space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-title-sm text-title-sm text-on-surface flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary inline-block"></span>
+            Solid Waste &amp; Garbage Dumps
+          </span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">26% (4,791)</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 26%;"></div>
+</div>
+</div>
+<!-- BWSSB Water -->
+<div class="space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-title-sm text-title-sm text-on-surface flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-on-primary-container inline-block"></span>
+            Water Leakages &amp; Ruptures (BWSSB)
+          </span>
+<span class="font-label-sm text-label-sm text-primary-container font-bold">18% (3,317)</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-on-primary-container rounded-full" style="width: 18%;"></div>
+</div>
+</div>
+<!-- BESCOM Streetlights -->
+<div class="space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-title-sm text-title-sm text-on-surface flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-on-tertiary-container inline-block"></span>
+            Dark Spots &amp; Streetlights (BESCOM)
+          </span>
+<span class="font-label-sm text-label-sm text-tertiary-container font-bold">12% (2,211)</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-on-tertiary-container rounded-full" style="width: 12%;"></div>
+</div>
+</div>
+<!-- Flooding -->
+<div class="space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-title-sm text-title-sm text-on-surface flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-outline inline-block"></span>
+            Drainage Overflows &amp; Inundation
+          </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold">6% (1,105)</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-outline rounded-full" style="width: 6%;"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Monthly Complaints Trend (Resolved vs Pending) -->
+<section class="bg-surface-container-lowest p-4 rounded-xl shadow-[0_1px_3px_0_rgba(15,23,42,0.06)] space-y-space-md">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-title-md text-title-md text-primary">Monthly Resolution Velocity</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Efficiency benchmark: Resolved vs Backlog</p>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed-variant font-bold">
+        94% Clear Rate
+      </span>
+</div>
+<!-- Chart Legend & Status Highlights -->
+<div class="flex items-center gap-4 bg-surface-container-low p-2.5 rounded-lg">
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Resolved (94%)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded-full bg-on-tertiary-container"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Backlog (6%)</span>
+</div>
+<div class="ml-auto font-code-sm text-code-sm text-secondary font-bold">
+        +8.2% MoM
+      </div>
+</div>
+<!-- Inline Lightweight SVG Trend Line Chart -->
+<div class="relative w-full h-36 pt-2">
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 340 100">
+<defs>
+<lineargradient id="resolvedGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#006a66" stop-opacity="0.25"></stop>
+<stop offset="100%" stop-color="#006a66" stop-opacity="0.0"></stop>
+</lineargradient>
+<lineargradient id="backlogGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#e49200" stop-opacity="0.15"></stop>
+<stop offset="100%" stop-color="#e49200" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<!-- Subtle Horizontal Grid Lines -->
+<line stroke="#eff4ff" stroke-width="1" x1="0" x2="340" y1="10" y2="10"></line>
+<line stroke="#eff4ff" stroke-width="1" x1="0" x2="340" y1="50" y2="50"></line>
+<line stroke="#eff4ff" stroke-width="1" x1="0" x2="340" y1="90" y2="90"></line>
+<!-- Resolved Area Fill -->
+<polygon fill="url(#resolvedGradient)" points="0,75 55,60 110,48 165,38 220,25 275,18 330,12 330,100 0,100"></polygon>
+<!-- Resolved Line (Green/Teal) -->
+<polyline fill="none" points="0,75 55,60 110,48 165,38 220,25 275,18 330,12" stroke="#006a66" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></polyline>
+<!-- Backlog Area Fill -->
+<polygon fill="url(#backlogGradient)" points="0,85 55,82 110,80 165,84 220,88 275,90 330,92 330,100 0,100"></polygon>
+<!-- Backlog Line (Orange/Amber) -->
+<polyline fill="none" points="0,85 55,82 110,80 165,84 220,88 275,90 330,92" stroke="#e49200" stroke-dasharray="3,3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polyline>
+<!-- Data Points on peak -->
+<circle cx="330" cy="12" fill="#006a66" r="3.5"></circle>
+<circle cx="330" cy="92" fill="#e49200" r="3"></circle>
+</svg>
+<!-- Chart Month Labels -->
+<div class="flex justify-between text-on-surface-variant font-code-sm text-code-sm text-[11px] pt-2 px-1">
+<span>Apr</span>
+<span>May</span>
+<span>Jun</span>
+<span>Jul</span>
+<span>Aug</span>
+<span>Sep</span>
+<span class="font-bold text-primary">Oct '24</span>
+</div>
+</div>
+</section>
+<!-- Computer Vision Live Telemetry / Model Info -->
+<section class="bg-surface-container-low p-4 rounded-xl flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-lowest flex items-center justify-center text-secondary shadow-sm flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">dataset</span>
+</div>
+<div class="min-w-0">
+<span class="font-title-sm text-title-sm text-primary block leading-tight">Vision Pipeline v4.2 Active</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[11px] mt-0.5 leading-snug">
+        Trained on 250k+ Indian civic images across potholes, unauthorized dump sites, and broken water pipes.
+      </p>
+</div>
+</section>
+<!-- Interactive Action Bar -->
+<section class="flex items-center gap-2 pt-1 pb-4">
+<button class="flex-1 h-11 rounded-lg bg-primary text-on-primary font-title-sm text-title-sm flex items-center justify-center gap-1.5 shadow-md active:scale-98 transition-transform">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Export BBMP Triage PDF</span>
+</button>
+<button aria-label="Share Analytics" class="h-11 px-3.5 rounded-lg bg-surface-container text-primary font-title-sm text-title-sm flex items-center justify-center active:scale-98 transition-transform">
+<span class="material-symbols-outlined text-[18px]">share</span>
+</button>
+</section>
+</div>
+<script>
+  // Simple micro-interaction for filter pill toggles
+  document.querySelectorAll('section button').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      if (this.innerText.includes('Last') || this.innerText.includes('Month') || this.innerText.includes('Q3')) {
+        const parent = this.parentElement;
+        parent.querySelectorAll('button').forEach(b => {
+          b.className = 'px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm whitespace-nowrap active:scale-95 transition-transform';
+        });
+        this.className = 'px-3.5 py-1.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm shadow-sm whitespace-nowrap flex items-center gap-1';
+      }
+    });
+  });
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.05)]" data-active-classes="text-secondary"><div class="flex items-center justify-around h-20 px-space-xs"><a class="flex flex-col items-center justify-center gap-1 w-14 h-14 text-on-surface-variant hover:text-on-surface transition-colors min-w-[44px] min-h-[44px]" data-path="home-overview" href="#"><span class="material-symbols-outlined text-[22px]">home</span><span class="font-label-sm text-label-sm">Home</span></a><a class="flex flex-col items-center justify-center gap-1 w-14 h-14 text-on-surface-variant hover:text-on-surface transition-colors min-w-[44px] min-h-[44px]" data-path="citizen-tracker" href="#"><span class="material-symbols-outlined text-[22px]">track_changes</span><span class="font-label-sm text-label-sm">Tracker</span></a><a class="relative flex flex-col items-center justify-center -top-3 group min-w-[44px] min-h-[44px]" data-path="report-issue" href="#"><div class="w-12 h-12 rounded-xl bg-primary text-on-primary flex items-center justify-center shadow-lg shadow-primary/25 group-active:scale-95 transition-transform"><span class="material-symbols-outlined text-[26px]">add</span></div><span class="font-label-sm text-label-sm text-on-surface-variant mt-1 group-hover:text-primary transition-colors">Report</span></a><a aria-current="page" class="flex flex-col items-center justify-center gap-1 w-14 h-14 transition-colors min-w-[44px] min-h-[44px] text-secondary" data-path="ai-analytics" href="#"><span class="material-symbols-outlined text-[22px]">insights</span><span class="font-label-sm text-label-sm">Insights</span></a><a class="flex flex-col items-center justify-center gap-1 w-14 h-14 text-on-surface-variant hover:text-on-surface transition-colors min-w-[44px] min-h-[44px]" data-path="admin-portal" href="#"><span class="material-symbols-outlined text-[22px]">shield_person</span><span class="font-label-sm text-label-sm">Admin</span></a></div></nav></body></html>
